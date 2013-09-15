@@ -9,6 +9,10 @@
   <b>Stars:</b>
   <%= @tweet.stars %>
 </p>
+<p>
+	
+  <%= link_to "Tweet it now!", "https://twitter.com/intent/tweet?text=#{@tweet.body}" %>
+</p>
 
 
 <%= link_to 'Edit', edit_tweet_path(@tweet) %> |
