@@ -10,30 +10,46 @@ Instructions are here: http://j.mp/CF-RoR
 
 Steps to build your first Rails app.
 1) Open your terminal in a mac and type this in: 
-• rails new tweet-queue
-• cd tweet-queue
-• rails s
 
-• Visit: http://localhost:3000 (You should see "Welcome Aboard!")
-• Stop the server by pressing: control + c
+  rails new tweet-queue
+  
+  cd tweet-queue
+  
+  rails s
+
+Visit: http://localhost:3000 (You should see "Welcome Aboard!")
+  
+  Stop the server by pressing: control + c
 
 Now we want to use Git (version control) to keep track of our changes. We'll push them to Github after this:
-• git init
-• git add .
-• git commit -m "Start of an example Rails app, to show how to make a Tweet Queue."
+  git init
+  
+  git add .
+  
+  git commit -m "Start of an example Rails app, to show how to make a Tweet Queue."
 
-• rails generate scaffold tweet body stars:integer
-• rake db:migrate
+  rails generate scaffold tweet body stars:integer
+  
+  rake db:migrate
 
 Now Restart the server
-• rails -s
-• Visit: http://localhost:3000/tweets
-• git commit -m "Add Tweet Resource for storing drafts"
-• Open your project in Sublime Text. Find the file app/views/tweets/show.html.erb and add:
-<p>
-  <%= link_to "Tweet it now!", "https://twitter.com/intent/tweet?text=#{@tweet.body}" %>
-</p>
+  rails -s
+  
+Now push your changes to Github by making a using the Github mac
+  
+  Visit: http://localhost:3000/tweets
+  
+  git commit -m "Add Tweet Resource for storing drafts"
+  
+  Open your project in Sublime Text. Find the file app/views/tweets/show.html.erb and add:
 
-• Visit: http://localhost:3000/tweets to see your changes
-• git add .
-• git commit -m "Add link to intent"
+  <p>
+  <%= link_to "Tweet it now!", "https://twitter.com/intent/tweet?text=#{@tweet.body}" %>
+  </p>
+
+Visit: http://localhost:3000/tweets to see your changes. 
+
+Now we want to push our last changes:
+  git add .
+  
+  git commit -m "Add link to intent"
